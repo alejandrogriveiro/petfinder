@@ -1,6 +1,5 @@
 import {
   BadRequestException,
-  ConflictException,
   ForbiddenException,
   HttpException,
   Injectable,
@@ -112,16 +111,16 @@ export class PetsService {
           'user.lastName',
           'user.phone',
         ])
-        .where('pet.code = :code', { code: term })
+        .where('pet.code = :code', { code: term.toUpperCase() })
         .getOne();
     }
 
-    if (!pet) throw new NotFoundException(`Pet with ${term} not found`);
+    if (!pet)
+      throw new NotFoundException(`Pet with ${term.toUpperCase()} not found`);
     return pet;
   }
 
   async update(id: string, updatePetDto: UpdatePetDto, user: User) {
-    console.log(user.roles);
     const pet = await this.findOne(id);
     if (pet.user.id !== user.id)
       throw new ForbiddenException('You are not allowed to update this pet');
@@ -137,10 +136,9 @@ export class PetsService {
   }
 
   async remove(id: string, user: User) {
-    console.log(user);
     const pet = await this.findOne(id);
     if (pet.user.id !== user.id)
-      throw new ForbiddenException('You are not allowed to update this pet');
+      throw new ForbiddenException('You are not allowed to delete this pet');
 
     await this.petRepository.remove(pet);
     return {

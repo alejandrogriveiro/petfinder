@@ -66,7 +66,6 @@ export class User {
 
   @BeforeUpdate()
   checkFieldsBeforeUpdate() {
-    console.log('checkFieldsBeforeUpdate');
     this.checkFieldsBeforeInsert();
   }
 }

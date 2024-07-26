@@ -1,5 +1,8 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
+import {
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './entities/user.entity';
@@ -74,11 +77,19 @@ export class UserService {
     return user;
   }
 
-  async update(id: string, updateUserDto: UpdateUserDto) {
-    const user = await this.findOne(id);
+  async update(id: string, updateUserDto: UpdateUserDto, user: User) {
+    if (updateUserDto.password) {
+      updateUserDto.password = await bcrypt.hash(updateUserDto.password, 10);
+    }
+
+    const existingUser = await this.findOne(id);
+
+    if (existingUser.id !== user.id) {
+      throw new ForbiddenException('You can not update this user');
+    }
 
     const updatedUser = this.userRepository.create({
-      ...user,
+      ...existingUser,
       ...updateUserDto,
     });
     await this.userRepository.save(updatedUser);
