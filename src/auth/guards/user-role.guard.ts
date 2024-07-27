@@ -5,6 +5,7 @@ import {
   Injectable,
   BadRequestException,
   ForbiddenException,
+  Logger,
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
 
@@ -28,15 +29,23 @@ export class UserRoleGuard implements CanActivate {
 
     const req = context.switchToHttp().getRequest();
     const user = req.user as User;
+    const logger = new Logger(UserRoleGuard.name);
 
-    if (!user) throw new BadRequestException('User not found');
+    if (!user) {
+      logger.error(`${context.getHandler().name} ${context.getClass().name} `);
+      throw new BadRequestException('User not found');
+    }
 
     for (const role of user.roles) {
       if (validRoles.includes(role)) {
         return true;
       }
     }
-
+    logger.error(
+      `Error: ${context.getHandler().name} ${
+        context.getClass().name
+      }  No estas autorizado para hacer esto `,
+    );
     throw new ForbiddenException(`No estas autorizado para hacer esto`);
   }
 }

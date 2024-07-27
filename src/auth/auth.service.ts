@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   ConflictException,
   Injectable,
   UnauthorizedException,
@@ -61,16 +62,17 @@ export class AuthService {
       ],
     });
     if (!user) {
-      throw new UnauthorizedException('Credenciales no validas');
+      throw new BadRequestException('Credenciales no validas');
     }
     if (!user.isActive)
       throw new UnauthorizedException('La Cuenta no fue activada');
 
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      throw new UnauthorizedException('Credenciales no validas');
+      throw new BadRequestException('Credenciales no validas');
     }
     delete user.password;
+    delete user.roles;
 
     return {
       ...user,
@@ -79,6 +81,7 @@ export class AuthService {
   }
 
   async checkAuthStatus(user: User) {
+    delete user.roles;
     return {
       ...user,
       token: this.getJwtToken({ id: user.id }),

@@ -1,4 +1,4 @@
-import { PartialType } from '@nestjs/mapped-types';
+import { PartialType } from '@nestjs/swagger';
 import { CreatePetDto } from './create-pet.dto';
 import { Exclude } from 'class-transformer';
 

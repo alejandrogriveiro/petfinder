@@ -23,7 +23,7 @@ import { AuthModule } from './auth/auth.module';
       autoLoadEntities: true,
     }),
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '..', 'public'),
+      rootPath: join(__dirname, '..', 'client'),
     }),
     PetsModule,
     UserModule,
