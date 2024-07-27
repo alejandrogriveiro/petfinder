@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPS Location Form</title>
+    <title>Pet-finder - GPS Location Form</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -46,15 +46,19 @@
         </div>
         <div class="form-group">
             <label for="latitude">Latitude</label>
-            <input type="text" id="latitude" name="latitude" readonly>
+            <input aria-readonly "text" id="latitude" name="latitude" readonly>
         </div>
         <div class="form-group">
             <label for="longitude">Longitude</label>
-            <input type="text" id="longitude" name="longitude" readonly>
+            <input aria-readonly "text" id="longitude" name="longitude" readonly>
+        </div>
+        <div class="form-group">
+            <p id="code-display">xxxx</p>
         </div>
         <div class="button-group">
             <button type="submit">Submit</button>
         </div>
+
     </form>
 
     <script>
@@ -64,6 +68,18 @@
             } else {
                 alert('Geolocation is not supported by this browser.');
             }
+
+            const queryString = window.location.search;
+
+            // Parse the query string
+            const urlParams = new URLSearchParams(queryString);
+
+            // Get the value of the 'code' parameter
+            const code = urlParams.get('code');
+
+            // Display the code value on the page
+            const codeDisplay = document.getElementById('code-display');
+            codeDisplay.textContent = code;
         });
 
         function showPosition(position) {
@@ -90,16 +106,20 @@
 
         const form = document.getElementById('locationForm');
         form.addEventListener('submit', (event) => {
+            event.preventDefault();
             const phone = document.getElementById('phone').value;
             const latitude = document.getElementById('latitude').value;
             const longitude = document.getElementById('longitude').value;
+            const code = document.getElementById('code-display').textContent;
 
             if (!phone) {
-                event.preventDefault();
                 alert('Phone number is required.');
             } else if (!latitude || !longitude) {
                 alert('Geolocation not provided. Submitting phone number only.');
             }
+
+            console.log(`Phone number: ${phone}\nLatitude: ${latitude}\nLongitude: ${longitude}\npetCode:${code}`);
+
         });
     </script>
 </body>
