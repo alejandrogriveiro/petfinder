@@ -23,7 +23,7 @@ async function bootstrap() {
         scheme: 'bearer',
         bearerFormat: 'JWT',
       },
-      'access-token', // This name will be used to reference this security scheme
+      'token', // This name will be used to reference this security scheme
     )
     .build();
   const document = SwaggerModule.createDocument(app, config);

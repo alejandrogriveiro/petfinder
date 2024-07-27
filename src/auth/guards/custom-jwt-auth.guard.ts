@@ -16,7 +16,7 @@ export class CustomJwtAuthGuard extends AuthGuard('jwt') {
         context.getClass().name
       } ${info.message}`;
       logger.error(message);
-      throw err || new UnauthorizedException('Token not found or invalid');
+      throw err || new UnauthorizedException('Token no encontrado o invalido');
     }
     return user;
   }

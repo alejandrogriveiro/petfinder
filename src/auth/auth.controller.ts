@@ -11,6 +11,7 @@ import {
   ApiTags,
   ApiOperation,
   ApiUnauthorizedResponse,
+  ApiBearerAuth,
 } from '@nestjs/swagger';
 
 @Controller('auth')
@@ -66,7 +67,8 @@ export class AuthController {
   @Get('check-status')
   @ApiOperation({ summary: 'Chequea estado del usuario segun el token' })
   @ApiResponse({ status: 200, description: 'Usuario revalidado' })
-  @ApiUnauthorizedResponse({ description: 'Credenciales no validas' })
+  @ApiUnauthorizedResponse({ description: 'Token no encontrado o invalido' })
+  @ApiBearerAuth('token')
   @Auth()
   checkAuthStatus(@GetUser() user: User) {
     return this.authService.checkAuthStatus(user);
