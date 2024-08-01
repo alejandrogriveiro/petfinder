@@ -1,0 +1,147 @@
+/*-----STYLES MI CUENTA-----*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.body__register {
+    height: 100vh;
+    background-image: url(../img/logotipo\ para\ pet\ shop\ perros\ y\ gatos.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    padding: 1.5rem 0;
+}
+
+.logo {
+    text-decoration: none;
+    color: #ff9800;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.main-container {
+    display: flex;
+    height: 60%; /* Ocupa el 60% de la altura de la pantalla */
+    width: 60%; /* Ocupa el 60% del ancho de la pantalla */
+    margin: auto; /* Centra el contenedor principal */
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    width: 30%; /* Ajusta el ancho de la barra lateral */
+    background-color: #333333;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 3px solid #ff9800; /* Línea de separación fina y de color */
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 15px; /* Aumenta el tamaño de los botones */
+    margin: 20px 0; /* Aumenta la separación entre los botones */
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Redondea los botones */
+    font-size: 1.1rem; /* Aumenta el tamaño del texto */
+    transition: background-color 0.3s;
+}
+
+.sidebar button:hover {
+    background-color: #e68900;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #333333;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+
+/*TARJETAS DE LAS MASCOTAS*/
+
+.pet-card {
+    border: 1px solid #ccc;
+    padding: 15px; /* Aumenta el padding para mejor espaciado */
+    margin: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    width: calc(33% - 20px); /* 3 tarjetas por fila con margen */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    vertical-align: top; /* Alinea las tarjetas en la parte superior */
+}
+
+.pet-picture {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Añade margen inferior para separar la imagen del texto */
+}
+
+h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em; /* Ajusta el tamaño de fuente para que se vea mejor */
+}
+
+p {
+    margin: 5px 0; /* Añade margen a los párrafos para separar mejor las líneas */
+    font-size: 0.9em; /* Ajusta el tamaño de fuente para los párrafos */
+}
+
+/* Opcional: estilos para el código y el estado activo */
+.pet-card p strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column; /* Cambia la dirección del contenedor principal */
+        height: auto; /* Permite que el contenedor principal tenga altura automática */
+        width: 90%; /* Ajusta el ancho del contenedor principal */
+        border: none; /* Elimina la línea de separación en vista móvil */
+    }
+
+    .sidebar {
+        width: 100%; /* La barra lateral ocupa todo el ancho */
+        display: flex;
+        flex-direction: row; /* Cambia la dirección de los botones */
+        justify-content: space-around; /* Espacia los botones uniformemente */
+        border: none; /* Elimina el borde */
+        padding: 10px 0; /* Ajusta el padding */
+        border-bottom: 3px solid #ff9800; /* Línea de separación fina y de color en vista móvil */
+    }
+
+    .sidebar button {
+        width: auto; /* Los botones ocupan su ancho contenido */
+        margin: 10px; /* Reduce la separación entre los botones */
+        flex-grow: 1; /* Permite que los botones crezcan uniformemente */
+    }
+
+    .content {
+        width: 100%; /* La sección de contenido ocupa todo el ancho */
+    }
+}

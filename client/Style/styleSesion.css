@@ -1,0 +1,274 @@
+/*-----STYLES SESION-----*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background-image: url(../img/logotipo\ para\ pet\ shop\ perros\ y\ gatos.png);
+    background-size: cover;
+}
+.header__sesion{
+    
+    color: #ffffff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    padding: 1.5rem 0;
+}
+.logo{
+    text-decoration: none;
+    color: #ff9800;
+    font-weight: 900;
+    font-size: 1rem;
+}
+.titulo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #ff9800;
+}
+.seccion__form{
+    background-color: #333333;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    font-size: 1.2rem;
+}
+.form{
+    width: 80%;
+}
+.sesion{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 50px;
+    padding: 0px 20px;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    border: 2px solid #ff9800;
+    background-color: #333333;
+    outline: none;
+    color: #ffffff;
+    display: flex;
+}
+.sesion input{
+    background-color: #333333;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+.sesion input::placeholder{
+    font-size: 1.5rem;
+}
+
+.div__boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.boton{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.2rem;font-weight: 800;
+    box-sizing: content-box;
+    background-color: #ff9800;
+    border: 2px solid #ff9800;
+    color: #ffffff;
+    border-radius: 5px;
+}
+.boton__create {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #ff9800;
+    border-radius: 5px;
+}
+.register{
+    margin-top: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #787878;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+/*-----RESPONSIVE 880PX REGISTER-----*/
+
+
+.body {
+    height: 100vh;
+    background-image: url(../img/bg-register.jpg);
+}
+
+.header__sesion {
+    color: #ffffff;
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 40px;
+    padding: 1.5rem 0;
+}
+
+.logo {
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 1rem;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ff9800;
+}
+
+.seccion__form {
+    background-color: #333333;
+    width: 35%;
+    margin: 0 auto;
+    border-radius: 5px;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    font-size: 1.2rem;
+}
+
+.form {
+    width: 80%;
+}
+
+.sesion {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    border: 2px solid #ff9800;
+    background-color: #333333;
+    outline: none;
+    color: #ffffff;
+}
+
+.error__text{
+    color: #ff0000;
+    font-size: 0.8rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.sesion input[type="password"] {
+    color: transparent;
+}
+
+.sesion input[type="password"]:focus {
+    color: #ffffff; 
+    font-size: 25px;
+}
+
+.fechaNacimiento {
+    align-items: center;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.div__boton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.boton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-sizing: content-box;
+    background-color: #ff9800;
+    border: 2px solid #ff9800;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
+.boton__create {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    padding: 0.8rem 0.8rem;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: content-box;
+    background-color: #ffffff;
+    border: 2px solid #ffffff;
+    color: #ff9800;
+    border-radius: 5px;
+}
+
+.register {
+    margin-top: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #787878;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Estilos específicos para pantallas con un ancho máximo de 880px */
+@media only screen and (max-width: 880px) {
+    .seccion__form {
+        width: 80%; /* Reduce el ancho del contenedor en pantallas más pequeñas */
+    }
+    
+    .form {
+        width: 100%; /* Ajusta el ancho del formulario para que ocupe todo el ancho del contenedor */
+    }
+}

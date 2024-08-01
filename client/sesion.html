@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/styleSesion.css">
+    <title>sesion</title>
+</head>
+<body>
+    <header class="header__sesion">
+        <nav class="header__nav">
+            <a class="logo" href="index.html">
+                <i class="fas fa-film" aria-hidden="true"></i>
+                <span>QRPetGuardian</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="seccion__form">
+        <form class="form" id="loginForm">
+            <h2 class="titulo">Iniciar Sesión</h2>
+
+            <div class="sesion">
+                <input type="text" placeholder="Email" name="email" id="email" required>
+            </div>
+            <div class="sesion">
+                <input type="password" placeholder="Password" name="password" id="password" required>
+            </div>
+            
+            <div class="div__boton">
+                <input class="boton" type="submit" value="Iniciar Sesión">
+            </div>
+
+            <div class="div__boton">
+                <a href="register.html" class="boton__create">Crear Cuenta</a>
+            </div>
+
+            <div>
+                <a class="register" href="register.html">Registrarse</a>
+            </div>
+        </form>
+    </section>
+
+    <script src="./js/scriptLogin.js"></script>
+</body>
+</html>
+

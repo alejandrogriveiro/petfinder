@@ -1,31 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PetFinder</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #9f3647;
-        }
-
-        h1 {
-            color: #ffffff;
-            font-size: 3rem;
-            ;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Style/styleHome.css">
+    <title>CV Alejandro Riveiro</title>
 </head>
-
 <body>
-    <h1>Welcome to PetFinder</h1>
-</body>
+   <!--INICIO-->
+   <section id="inicio">
+    <div class="contenido">
+        <header>
+            <div class="contenido-header">
+                <div class="logo"><img src="./img/LogoAR.png" width="40px" height="30px" alt="Logo AR"></div>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">¿COMO FUNCIONA?</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">PREGUNTAS FRECUENTES</a></li>
+                            <li><a href="sesion.html" onclick="seleccionar(this)">MI CUENTA</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">CONTACTO</a></li>
+                        </ul>
+                    </nav>
+                    <!--HAMBURGUESA RESPONSIVE-->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <!--REDES SOCIALES-->
+                    <div class="redes">
+                        <a href="youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100089172138937"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/gabriel-alejandro-riveiro-8b3238261/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+            </div>
+        </header>
+        <div class="presentacion">
+            <img src="./img/FindPetQR Logo.png" alt="">
+            <h2><span>Encuentra - Escanea - Reúne</span></h2>
+            <p class="descripcion">Imagina la tranquilidad de saber que, si tu mascota se pierde, un simple escaneo puede devolverla a tus brazos. Con nuestras
+                medallas inteligentes equipadas con códigos QR, cualquier persona que encuentre a tu amigo peludo podrá escanear el código y
+                acceder instantáneamente a tu información de contacto.</p>
+                <a href="#portfolio">Ir a Portfolio</a>
+        </div>
+    </div>
+   </section> 
 
+   <!--¿COMO FUNCIONA?-->
+   <section id="sobremi">
+    <div class="contenedor-foto">
+        <img src="./img/mipetqrbox.png" alt="imagen personal">
+    </div>
+    <div class="sobremi">
+        <p class="titulo-seccion">¿Como Funciona?</p>
+        <h2><span>Encuentra a tu Mascota Perdida con Nuestro Sistema Innovador</span></h2>
+        <p></p>
+        <p>
+            <strong>¿CÓMO FUNCIONA?</strong><br><br>
+            Nuestro sistema es un accesorio inteligente que agregas al collar de tu mascota. Este accesorio tiene un código QR que, al escanearlo, permite lo siguiente:
+          </p>
+          <ol>
+            <li><strong>Información de Contacto:</strong> La persona que lo escanea puede ver el nombre de tu mascota, su foto, y contactar contigo a través de varios medios como WhatsApp, teléfono o correo electrónico.</li>
+            <li><strong>Estado de Salud:</strong> Puedes incluir información sobre condiciones de salud específicas de tu mascota.</li>
+            <li><strong>Notificaciones y Ubicación:</strong> Recibirás una notificación por correo y WhatsApp con la ubicación aproximada. Si quien escanea el QR comparte su ubicación, obtendrás la ubicación precisa.</li>
+            <li><strong>Historial Clínico y Recordatorios:</strong> Guarda y gestiona la historia clínica de tu mascota y programa recordatorios para vacunas y visitas al veterinario.</li>
+          </ol>
+          <p>
+            El servicio web es completamente gratuito; solo necesitas adquirir las medallas con el código QR.
+          </p>
+          
+
+    </div>
+   </section>
+
+   <!--SERVICIOS-->
+   <section id="servicios">
+    <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+
+   </section>
+   <!--HABILIDADES-->
+
+   <!--PORTFOLIO-->
+
+   <!--CONTACTO-->  
+   <section id="contacto">
+    <h3 class="titulo-seccion">Contactame ahora</h3>
+    <div class="contenedor-form">
+        <form action="">
+            <div class="fila mitad">
+                <input type="text" placeholder="Nombre Completo" class="input-mitad">
+                <input type="text" placeholder="Dirección de Mail" class="input-mitad">
+            </div>
+            <div class="fila">
+                <input type="text" placeholder="Tema..." class="input-full">
+            </div>
+            <div class="fila">
+                <textarea name="" id="" cols="30" rows="10" placeholder="Tu Mensaje..." class="input-full"></textarea>
+            </div>
+            <input type="submit" value="Enviar Mensaje" class="btn-enviar">
+        </form>
+    </div>
+   </section>
+   <!--FOOTER-->
+   <footer>
+        <p>Todos los derechos reservados 2023</p>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </footer>
+    <script src="./js/scriptIndex.js"></script>
+</div>
+
+
+</body>
 </html>
