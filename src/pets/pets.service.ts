@@ -1,7 +1,7 @@
 import {
   BadRequestException,
+  ConflictException,
   ForbiddenException,
-  HttpException,
   Injectable,
   NotFoundException,
 } from '@nestjs/common';
@@ -12,19 +12,25 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Pet } from './entities/pet.entity';
 import { isUUID } from 'class-validator';
+import { QrcodeService } from '../qrcode/qrcode.service';
 
 @Injectable()
 export class PetsService {
-  constructor(@InjectRepository(Pet) private petRepository: Repository<Pet>) {}
+  constructor(
+    @InjectRepository(Pet) private petRepository: Repository<Pet>,
+    private qrcodeService: QrcodeService,
+  ) {}
 
   async create(createPetDto: CreatePetDto, user: User) {
     try {
       const { code } = createPetDto;
 
+      await this.qrcodeService.findOne(code);
+
       const existingPet = await this.petRepository.findOneBy({ code });
 
       if (existingPet) {
-        throw new HttpException('Pet already exists', 409);
+        throw new ConflictException('El QR ya fue utilizado');
       }
 
       const newPet = this.petRepository.create({
@@ -45,7 +51,8 @@ export class PetsService {
         user,
       };
     } catch (error) {
-      throw new BadRequestException(error.detail);
+      console.log(error.message);
+      throw new BadRequestException(error.message);
     }
   }
 
@@ -115,9 +122,34 @@ export class PetsService {
         .getOne();
     }
 
-    if (!pet)
+    if (!pet) {
       throw new NotFoundException(`Pet with ${term.toUpperCase()} not found`);
+    }
+
     return pet;
+  }
+
+  findByOwner(ownerId: string, user: User) {
+    return this.petRepository
+      .createQueryBuilder('pet')
+      .leftJoinAndSelect('pet.user', 'user')
+      .where('pet.user = :ownerId', { ownerId })
+      .andWhere('user.id = :userId', { userId: user.id })
+      .select([
+        'pet.id',
+        'pet.name',
+        'pet.code',
+        'pet.status',
+        'pet.picture',
+        'pet.bio',
+        'pet.isActive',
+        'user.id',
+        // 'user.email',
+        // 'user.firstName',
+        // 'user.lastName',
+        // 'user.phone',
+      ])
+      .getMany();
   }
 
   async update(id: string, updatePetDto: UpdatePetDto, user: User) {

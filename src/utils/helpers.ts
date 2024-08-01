@@ -1,3 +1,5 @@
+import QRCode from 'qrcode';
+
 export function capitalizeFirstWords(str) {
   return str
     .split(' ')
@@ -10,3 +12,8 @@ export function capitalizeFirstWords(str) {
     })
     .join(' ');
 }
+
+export const generateQRCode = async (text) => {
+  const qrCodeImage = await QRCode.toDataURL(text);
+  return qrCodeImage;
+};

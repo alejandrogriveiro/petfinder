@@ -52,6 +52,14 @@ export class PetsController {
     return this.petsService.findOne(term);
   }
 
+  @Get('owner/:ownerId')
+  @Auth()
+  @ApiOperation({ summary: 'Busqueda de la mascota por dueño' })
+  @ApiParam({ name: 'ownerId', type: 'string', description: 'Id del dueño' })
+  findByOwner(@Param('ownerId') ownerId: string, @GetUser() user: User) {
+    return this.petsService.findByOwner(ownerId, user);
+  }
+
   @Patch(':id')
   @Auth()
   @ApiOperation({ summary: 'Actualización de la mascota' })

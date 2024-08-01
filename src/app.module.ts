@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
 
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -7,6 +7,8 @@ import { join } from 'path';
 import { PetsModule } from './pets/pets.module';
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { QrcodeModule } from './qrcode/qrcode.module';
+import { LoggerMiddleware } from './middlewares/logger.middleware';
 
 @Module({
   imports: [
@@ -28,8 +30,14 @@ import { AuthModule } from './auth/auth.module';
     PetsModule,
     UserModule,
     AuthModule,
+    QrcodeModule,
   ],
   controllers: [],
   providers: [],
 })
-export class AppModule {}
+// para poder utilizar el middleware a nivel global
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer.apply(LoggerMiddleware).forRoutes('*');
+  }
+}
