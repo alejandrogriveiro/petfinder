@@ -9,7 +9,7 @@
 
 body {
     height: 100vh;
-    background-image: url(../img/logotipo\ para\ pet\ shop\ perros\ y\ gatos.png);
+    background-color: #336b87;
     background-size: cover;
 }
 
@@ -38,7 +38,7 @@ body {
 
 .container {
     background-color: #333333;
-    width: 35%;
+    width: 55%;
     margin: 0 auto;
     border-radius: 5px;
     padding: 20px;
@@ -126,7 +126,7 @@ button:hover {
 
 @media only screen and (max-width: 880px) {
     .container {
-        width: 80%;
+        width: 90%;
     }
 }
 

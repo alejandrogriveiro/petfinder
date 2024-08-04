@@ -9,7 +9,7 @@
 
 .body__register {
     height: 100vh;
-    background-image: url(../img/logotipo\ para\ pet\ shop\ perros\ y\ gatos.png);
+    background-color: #336b87;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -17,19 +17,8 @@
     justify-content: space-between;
 }
 
-.header__nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 40px;
-    padding: 1.5rem 0;
-}
-
-.logo {
-    text-decoration: none;
-    color: #ff9800;
-    font-weight: 900;
-    font-size: 2rem;
+.header__register {
+    /* Agrega estilos para el header si es necesario */
 }
 
 .main-container {
@@ -46,7 +35,22 @@
     background-color: #333333;
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    border-right: 3px solid #ff9800; /* Línea de separación fina y de color */
+    border-right: 3px solid #e68a03; /* Línea de separación fina y de color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+}
+
+.sidebar a {
+    display: block;
+    margin-bottom: 20px; /* Añade margen inferior para separar la imagen de los botones */
+}
+
+.sidebar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px; /* Agrega bordes redondeados si lo deseas */
 }
 
 .sidebar button {
@@ -54,7 +58,7 @@
     width: 100%;
     padding: 15px; /* Aumenta el tamaño de los botones */
     margin: 20px 0; /* Aumenta la separación entre los botones */
-    background-color: #ff9800;
+    background-color: #e68a03;
     color: white;
     border: none;
     cursor: pointer;
@@ -64,7 +68,8 @@
 }
 
 .sidebar button:hover {
-    background-color: #e68900;
+    background-color: #ffffff;
+    color: #333333; /* Cambia el color de fondo al pasar el mouse */
 }
 
 .content {
@@ -74,7 +79,6 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
 }
-
 
 /*TARJETAS DE LAS MASCOTAS*/
 
@@ -113,9 +117,6 @@ p {
     margin-bottom: 5px;
 }
 
-
-
-
 /* Responsive Design */
 @media (max-width: 768px) {
     .main-container {
@@ -132,7 +133,15 @@ p {
         justify-content: space-around; /* Espacia los botones uniformemente */
         border: none; /* Elimina el borde */
         padding: 10px 0; /* Ajusta el padding */
-        border-bottom: 3px solid #ff9800; /* Línea de separación fina y de color en vista móvil */
+        border-bottom: 3px solid #e68a03; /* Línea de separación fina y de color en vista móvil */
+    }
+
+    .sidebar a {
+        margin-bottom: 0; /* Elimina el margen inferior en vista móvil */
+    }
+
+    .sidebar img {
+        max-width: 150px; /* Ajusta el tamaño máximo de la imagen en vista móvil */
     }
 
     .sidebar button {

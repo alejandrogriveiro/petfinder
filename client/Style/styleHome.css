@@ -11,7 +11,7 @@ html {
     scroll-behavior: smooth;
 }
 #inicio {
-    background-image:url(../img/logotipo\ para\ pet\ shop\ perros\ y\ gatos.png);
+    background-color: #336b87;
     background-size: cover;
     background-position: center center;
     height: 100vh;
@@ -40,7 +40,7 @@ html {
 }
 #inicio .contenido header .contenido-header h1 {
     text-align: center;
-    color: #ff9800;
+    color: #8f887d;
 }
 #inicio .contenido header .contenido-header nav ul {
     list-style: none;
@@ -55,7 +55,7 @@ html {
     transition: .5s;
 }
 #inicio .contenido header .contenido-header nav ul a:hover {
-    color: #ff9800;
+    color: #e68a03;
 }
 #inicio .contenido header .contenido-header .redes a {
     text-decoration: none;
@@ -65,14 +65,14 @@ html {
     transition: .5s;
 }
 #inicio .contenido header .contenido-header .redes a:hover {
-    color: #ff9800;
+    color: #e68a03;
 }
 #inicio .contenido header .contenido-header .seleccionado {
-    color: #ff9800;
+    color: #e68a03;
 }
 #inicio .contenido .presentacion {
-    max-width: 1100px;
-    height: 130vh;
+    max-width: 1000px;
+    height: 100vh;
     margin: auto;
     font-weight: bold;
     color: #f3f3f3;
@@ -89,17 +89,17 @@ html {
 }
 #inicio .contenido .presentacion h2 {
     font-size: 55px;
-    margin-bottom: 25px;
+    margin: 40px 0;
     text-align: center;
 }
 #inicio .contenido .presentacion h2 span {
     font-size: 35px;
-    color: #ff9800;
+    color: #e68a03;
 }
 #inicio .contenido .presentacion .descripcion {
-    max-width: 900px;
-    margin: 25px auto;
-    font-size: 20px;
+    max-width: 1200px;
+    margin: 35px auto;
+    font-size: 30px;
     text-align: center;
 }
 #inicio .contenido .presentacion a {
@@ -115,7 +115,7 @@ html {
     transition: .5s;
 }
 #inicio .contenido .presentacion a:hover {
-    background-color: #ff9800;
+    background-color: #e68a03;
 }
 #icono-nav {
     color: #fff;
@@ -123,6 +123,7 @@ html {
 }
 
 /* SOBRE MI */
+
 #sobremi {
     max-width: 1100px;
     margin: auto;
@@ -131,22 +132,23 @@ html {
     display: flex;
 }
 #sobremi .contenedor-foto {
-    max-width: 400px;
-    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 #sobremi .contenedor-foto img {
-    padding: 20px;
-    width: 100%;
     border-radius: 20px;
     background-color: #f3f3f3;
 }
 #sobremi .sobremi .titulo-seccion {
     font-size: 22px;
+    font-weight: 700;
     text-transform: uppercase;
-    color: #ff9800;
+    color: #e68a03;
     text-decoration: underline;
-    text-decoration-color: #d3d3d3;
-    text-decoration-thickness: 5px;
+    text-decoration-color: #e68a03;
+    text-decoration-thickness: 2px;
 }
 #sobremi .sobremi h2 {
     font-size: 34px;
@@ -155,7 +157,7 @@ html {
     letter-spacing: 2px;
 }
 #sobremi .sobremi h2 span {
-    color: #ff9800;
+    color: #e68a03;
 }
 #sobremi .sobremi h3 {
     font-size: 18px;
@@ -165,10 +167,16 @@ html {
     letter-spacing: 1px;
 }
 #sobremi .sobremi p {
-    font-size: 14px;
+    font-size: 20px;
     line-height: 25px;
     color: #565656;
     margin-bottom: 12px;
+}
+#sobremi .sobremi strong{
+    font-size: 20px;
+}
+#sobremi .sobremi li{
+    font-size: 20px;
 }
 #sobremi .sobremi a {
     display: inline-block;
@@ -181,237 +189,12 @@ html {
     transition: .5s;
 }
 #sobremi .sobremi a:hover {
-    background-color: #ff9800;
+    background-color: #e68a03;
     color: #fff;
 }
 
-/*SERVICIOS*/
-#servicios {
-    padding: 100px 15px;
-    text-align: center;
-    background-color: #f3f3f3;
-}
-#servicios .titulo-seccion {
-    font-size: 22px;
-    text-transform: uppercase;
-    color: #111135;
-    text-decoration: underline;
-    text-decoration-color: #d3d3d3;
-    text-decoration-thickness: 5px;
-}
-
-#servicios .fila {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 30px auto;
-}
-#servicios .fila .servicio {
-    max-width: 350px;
-    background-color: #fff;
-    padding: 30px;
-    margin: 0 5px;
-    border-radius: 5px;
-    transition: .5s;
-}
-#servicios .fila .servicio:hover {
-    box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
-}
-#servicios .fila .servicio h4 {
-    font-size: 22px;
-    margin-bottom: 25px;
-}
-#servicios .fila .servicio .icono {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #d3d3d3;
-    padding: 20px;
-    margin-bottom: 25px;
-}
-#servicios .fila .servicio hr {
-    width: 30%;
-    margin: auto;
-    color: #000;
-    margin-bottom: 25px;
-}
-#servicios .fila .servicio ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-#servicios .fila .servicio p {
-    font-size: 14px;
-    line-height: 22px;
-}
-
-/*HABILIDADES*/
-.contenedor-skills {
-    background: url(./img/Fondo1.jpg);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 100px 0;
-    text-align: center;
-    color: #ff9800;
-}
-.contenedor-skills .skill {
-    max-width: 600px;
-    margin: 30px auto;
-}
-.contenedor-skills .skill .info {
-    display: flex;
-    justify-content: space-between;
-}
-.contenedor-skills .skill .lista {
-    display: inline-block;
-    margin-right: 20px;
-    height: 10px;
-    width: 10px;
-    background-color: #fff;
-}
-.contenedor-skills .skill .barra {
-    background-color: #919191;
-    width: 100%;
-    height: 8px;
-    margin: 10px;
-}
-/*PROGRESO DE BARRA ANIMADA CON JS*/
-.contenedor-skills .skill .barra .barra-progreso1 {
-    background-color: #ff9800;
-    width: 80%;
-    height: 8px;
-    animation: progreso1 4s forwards;
-}
-.contenedor-skills .skill .barra .barra-progreso2 {
-    background-color: #ff9800;
-    width: 80%;
-    height: 8px;
-    animation: progreso2 4s forwards;
-}
-.contenedor-skills .skill .barra .barra-progreso3 {
-    background-color: #ff9800;
-    width: 60%;
-    height: 8px;
-    animation: progreso3 4s forwards;
-}
-.contenedor-skills .skill .barra .barra-progreso4 {
-    background-color: #ff9800;
-    width: 60%;
-    height: 8px;
-    animation: progreso3 4s forwards;
-}
-.contenedor-skills .skill .barra .barra-progreso5 {
-    background-color: #ff9800;
-    width: 50%;
-    height: 8px;
-    animation: progreso4 4s forwards;
-}
-.contenedor-skills .skill .barra .barra-progreso6 {
-    background-color: #ff9800;
-    width: 50%;
-    height: 8px;
-    animation: progreso5 4s forwards;
-}
-/*ANIMACION DE LAS BARRAS (JS)*/
-@keyframes progreso1 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 80%;
-    }
-}
-@keyframes progreso2 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 80%;
-    }
-}
-@keyframes progreso3 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 60%;
-    }
-}
-@keyframes progreso4 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 50%;
-    }
-}
-@keyframes progreso5 {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 80%;
-    }
-}
-
-/*PORTFOLIO*/
-#portfolio {
-    max-width: 1100px;
-    padding: 100px 0;
-    margin: auto;
-}
-#portfolio .titulo-seccion {
-    text-align: center;
-    font-size: 22px;
-    text-transform: uppercase;
-    color: #111135;
-    text-decoration: underline;
-    text-decoration-color: #d3d3d3;
-    text-decoration-thickness: 5px;
-}
-#portfolio .fila {
-    display: flex;
-    justify-content: space-between;
-    margin: 30px 0;
-}
-#portfolio .fila .proyecto {
-    max-width: 450px;
-    border: 1px solid #000;
-    margin: 0 10px;
-    position: relative;
-    overflow: hidden;
-}
-#portfolio .fila .proyecto img {
-    width: 100%;
-    height: 100%;
-    filter: grayscale(1);
-    object-fit: cover;
-    transition: .5s;
-}
-#portfolio .fila .proyecto:hover img {
-    filter: grayscale(0);
-}
-#portfolio .fila .proyecto .info {
-    position: absolute;
-    left: 0;
-    background-color: rgba(0, 0, 0, .8);
-    color: #ff9800;
-    width: 100%;
-    padding: 10px;
-    opacity: 0;
-    bottom: -40px;
-    transition: .5s;
-}
-#portfolio .fila .proyecto:hover .info {
-    opacity: 1;
-    bottom: 0;
-}
-
 /*CONTACTO*/
+
 #contacto {
     padding: 100px 15px;
 }
@@ -464,6 +247,7 @@ html {
 }
 
 /*FOOTER*/
+
 footer {
     background-color: #000;
     color: #fff;
@@ -479,7 +263,7 @@ footer a {
 }
 
 /*RESPONSIVE*/
-@media screen and (max-width:800px) {
+@media screen and (max-width:550px) {
     /*.redes {
         display: none;
     }*/
@@ -505,6 +289,16 @@ footer a {
     #icono-nav {
         display: block;
     }
+    #inicio .contenido .presentacion h2 span {
+        font-size: 25px;
+        color: #e68a03;
+    }
+    #inicio .contenido .presentacion .descripcion {
+        max-width: 1200px;
+        margin: 35px 10px;
+        font-size: 20px;
+        text-align: center;
+    }
     #inicio .contenido .presentacion h2 {
         font-size: 40px;
     }
@@ -526,30 +320,7 @@ footer a {
         font-size: 25px;
         text-align: center;
     }
-
-    #servicios {
-        padding: 
-        50px 15px;
-    }
-    #servicios .fila {
-        display: block;
-    }
-    #servicios .fila .servicio {
-        margin: 10px auto;
-    }
-    .contenedor-skills {
-        padding: 50px 20px;
-    }
-
-    #portfolio {
-        padding: 50px 0;
-    }
-    #portfolio .fila {
-        display: block;
-    }
-    #portfolio .fila .proyecto {
-        margin: 10px auto;
-    }
+    
 
     #contacto .contenefor-form .mitad {
         margin-bottom: 15px;
