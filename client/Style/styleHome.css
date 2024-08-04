@@ -87,7 +87,7 @@ html {
 
 #inicio .contenido .presentacion {
     max-width: 1000px;
-    margin: auto;
+    margin: 50px auto;
     font-weight: bold;
     color: #f3f3f3;
     display: flex;
@@ -309,7 +309,7 @@ footer a {
 
 /*RESPONSIVE*/
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
     nav {
         display: none;
     }
@@ -383,3 +383,27 @@ footer a {
         margin: 15px 0;
     }
 }
+@media (max-width: 480px) {
+    #inicio .contenido .presentacion h2 {
+        font-size: 24px;
+    }
+
+    #inicio .contenido .presentacion .descripcion {
+        font-size: 18px;
+    }
+
+    #sobremi .sobremi h2 {
+        font-size: 22px;
+    }
+
+    #contacto .btn-enviar {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
+
+
+
+
+
