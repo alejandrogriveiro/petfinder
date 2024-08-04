@@ -7,15 +7,19 @@
     box-sizing: border-box;
     font-family: 'Montserrat';
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 #inicio {
     background-color: #336b87;
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    padding-top: 80px; /* Add padding to separate content from header */
 }
+
 #inicio .contenido header {
     background-color: rgba(0, 0, 0, .8);
     position: fixed;
@@ -23,7 +27,8 @@ html {
     z-index: 100;
     top: 0;
 }
-#inicio .contenido header .contenido-header{
+
+#inicio .contenido header .contenido-header {
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -31,32 +36,39 @@ html {
     align-items: center;
     padding: 10px 20px;
 }
+
 #inicio .contenido header .contenido-header .logo {
     margin: 0;
 }
+
 #inicio .contenido header .contenido-header .logo:hover {
     transform: scale(400%);
     margin: 45px;
 }
+
 #inicio .contenido header .contenido-header h1 {
     text-align: center;
     color: #8f887d;
 }
+
 #inicio .contenido header .contenido-header nav ul {
     list-style: none;
     display: flex;
     align-items: center;
 }
-#inicio .contenido header .contenido-header nav ul li a{
+
+#inicio .contenido header .contenido-header nav ul li a {
     text-decoration: none;
     color: #fff;
     margin: 0 12px;
     font-weight: 400;
     transition: .5s;
 }
+
 #inicio .contenido header .contenido-header nav ul a:hover {
     color: #e68a03;
 }
+
 #inicio .contenido header .contenido-header .redes a {
     text-decoration: none;
     color: #fff;
@@ -64,15 +76,17 @@ html {
     margin-left: 10px;
     transition: .5s;
 }
+
 #inicio .contenido header .contenido-header .redes a:hover {
     color: #e68a03;
 }
+
 #inicio .contenido header .contenido-header .seleccionado {
     color: #e68a03;
 }
+
 #inicio .contenido .presentacion {
     max-width: 1000px;
-    height: 100vh;
     margin: auto;
     font-weight: bold;
     color: #f3f3f3;
@@ -81,27 +95,32 @@ html {
     align-items: center;
     justify-content: center;
 }
+
 #inicio .contenido .presentacion .bienvenida {
     font-size: 16px;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 5px;
 }
+
 #inicio .contenido .presentacion h2 {
     font-size: 55px;
     margin: 40px 0;
     text-align: center;
 }
+
 #inicio .contenido .presentacion h2 span {
     font-size: 35px;
     color: #e68a03;
 }
+
 #inicio .contenido .presentacion .descripcion {
     max-width: 1200px;
     margin: 35px auto;
     font-size: 30px;
     text-align: center;
 }
+
 #inicio .contenido .presentacion a {
     text-decoration: none;
     display: inline-block;
@@ -114,9 +133,11 @@ html {
     text-transform: uppercase;
     transition: .5s;
 }
+
 #inicio .contenido .presentacion a:hover {
     background-color: #e68a03;
 }
+
 #icono-nav {
     color: #fff;
     display: none;
@@ -131,16 +152,22 @@ html {
     color: #111135;
     display: flex;
 }
+
 #sobremi .contenedor-foto {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+    margin-bottom: 20px; /* Add margin-bottom to separate from header */
 }
+
 #sobremi .contenedor-foto img {
     border-radius: 20px;
     background-color: #f3f3f3;
+    max-width: 100%; /* Ensure image does not overflow */
+    height: auto;
 }
+
 #sobremi .sobremi .titulo-seccion {
     font-size: 22px;
     font-weight: 700;
@@ -150,15 +177,18 @@ html {
     text-decoration-color: #e68a03;
     text-decoration-thickness: 2px;
 }
+
 #sobremi .sobremi h2 {
     font-size: 34px;
     font-weight: bold;
     margin: 20px 0;
     letter-spacing: 2px;
 }
+
 #sobremi .sobremi h2 span {
     color: #e68a03;
 }
+
 #sobremi .sobremi h3 {
     font-size: 18px;
     font-weight: 500;
@@ -166,18 +196,22 @@ html {
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
+
 #sobremi .sobremi p {
     font-size: 20px;
     line-height: 25px;
     color: #565656;
     margin-bottom: 12px;
 }
-#sobremi .sobremi strong{
+
+#sobremi .sobremi strong {
     font-size: 20px;
 }
-#sobremi .sobremi li{
+
+#sobremi .sobremi li {
     font-size: 20px;
 }
+
 #sobremi .sobremi a {
     display: inline-block;
     text-decoration: none;
@@ -188,6 +222,7 @@ html {
     margin-top: 30px;
     transition: .5s;
 }
+
 #sobremi .sobremi a:hover {
     background-color: #e68a03;
     color: #fff;
@@ -198,6 +233,7 @@ html {
 #contacto {
     padding: 100px 15px;
 }
+
 #contacto .titulo-seccion {
     margin-bottom: 20px;
     text-align: center;
@@ -208,17 +244,21 @@ html {
     text-decoration-color: #d3d3d3;
     text-decoration-thickness: 5px;
 }
+
 #contacto .contenedor-form {
     max-width: 1100px;
     margin: auto;
 }
+
 #contacto .contenedor-form .fila {
     margin-bottom: 15px;
 }
+
 #contacto .contenefor-form .mitad {
     display: flex;
     justify-content: space-between;
 }
+
 #contacto .contenedor-form input,
 #contacto .contenedor-form textarea {
     padding: 20px;
@@ -226,12 +266,15 @@ html {
     border: none;
     border: 1px solid #919191;
 }
+
 #contacto .contenedor-form .mitad input {
     width: 48%;
 }
+
 #contacto .contenedor-form .input-full {
     width: 100%;
 }
+
 #contacto .btn-enviar {
     display: block;
     margin: auto;
@@ -241,6 +284,7 @@ html {
     font-size: 18px;
     font-weight: bold;
 }
+
 #contacto .btn-enviar:hover {
     background-color: #ff9800;
     color: #fff;
@@ -254,6 +298,7 @@ footer {
     text-align: center;
     padding: 30px 0;
 }
+
 footer a {
     text-decoration: none;
     color: #fff;
@@ -263,13 +308,12 @@ footer a {
 }
 
 /*RESPONSIVE*/
-@media screen and (max-width:550px) {
-    /*.redes {
-        display: none;
-    }*/
+
+@media screen and (max-width: 800px) {
     nav {
         display: none;
     }
+
     nav.responsive {
         display: block;
         background-color: rgba(0, 0, 0, .8);
@@ -279,57 +323,63 @@ footer a {
         left: 0;
         padding: 10px;
     }
+
     nav.responsive ul {
         display: block !important;
         text-align: center;
     }
+
     nav.responsive ul li {
         margin: 5px 0;
     }
+
     #icono-nav {
         display: block;
     }
+
     #inicio .contenido .presentacion h2 span {
         font-size: 25px;
         color: #e68a03;
     }
+
     #inicio .contenido .presentacion .descripcion {
         max-width: 1200px;
         margin: 35px 10px;
         font-size: 20px;
         text-align: center;
     }
-    #inicio .contenido .presentacion h2 {
-        font-size: 40px;
+
+    #inicio .contenido .presentacion a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 25px;
+        padding: 15px 20px;
+        border: 2px solid #fff;
+        border-radius: 50px;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: .5s;
     }
+
     #sobremi {
-        padding: 50px 0;
-        display: block;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 15px;
     }
+
     #sobremi .contenedor-foto {
-        max-width: 200px;
-        margin: auto;
+        max-width: 90%;
+        margin-bottom: 20px;
     }
+
     #sobremi .contenedor-foto img {
-        padding: 8px;
+        max-width: 100%; /* Ensure image does not overflow */
+        height: auto;
     }
-    #sobremi .sobremi .titulo-seccion {
-        text-align: center;
-    }
+
     #sobremi .sobremi h2 {
         font-size: 25px;
-        text-align: center;
-    }
-    
-
-    #contacto .contenefor-form .mitad {
-        margin-bottom: 15px;
-        display: block;
-    }
-    #contacto .contenedor-form .mitad input {
-        width: 100%;
-        margin-bottom: 15px;
+        margin: 15px 0;
     }
 }
-
-
