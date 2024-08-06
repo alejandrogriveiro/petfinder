@@ -7,7 +7,6 @@
     font-family: sans-serif;
 }
 .body__register{
-    height: 100vh;
     background-color: #336b87;
     background-size: cover;
     display: flex;
